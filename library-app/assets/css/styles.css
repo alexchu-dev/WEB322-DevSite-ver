@@ -1,0 +1,201 @@
+/****************  Assignment 6   *****************/
+/*      Alex Chu (sid:153954219) @ WEB322NAA      */
+/**************************************************/
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  color: #212121;
+  margin: 0 auto;
+}
+main {
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+}
+/**************  Header  **************/
+header {
+  display: flex;
+  color: #000;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+#logo {
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+  margin-right:0.5rem;
+}
+.logo-text {
+  color:#fff;
+  font-size: 0.7rem;
+}
+.logo-text2 {
+  color:#555;
+  font-size: 0.7rem;
+}
+/**************  Nav Bar override **************/
+.my-navbar {
+  width: 100%;
+  display: flex;
+  padding: 1rem 1rem;
+  background-color: #F6C6EA;
+  box-shadow: #a8a8a8 0px 5px 5px;
+}
+.my-navbar ul li a {
+  color: rgb(255, 255, 255);
+}
+/***************  Common Classes   ***************/
+.left {
+  left: 0px;
+}
+.right {
+  right: 0px;
+  text-align: right;
+}
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.clear {
+  clear: both;
+}
+.strong {
+  font-weight: 700;
+}
+.small {
+  font-size: 0.8rem;
+}
+.larger {
+  font-size: 1.5rem;
+}
+.largest {
+  font-size: 1.8rem;
+}
+.border {
+  border: #000 1px solid;
+}
+.underline {
+  text-decoration: underline;
+}
+.home-title {
+  text-decoration: underline;
+}
+.error-message {
+  margin:50px;
+}
+/********************* Theme palette for background and text *********************/
+.bg-palette-1 {
+  background-color: #CDF0EA;
+}
+.bg-palette-2 {
+  background-color: #e6e6e6;
+}
+.font-palette-1 {
+  color: #A4BC92;
+}
+.font-palette-2 {
+  color: #ffffff;
+}
+.font-1 {
+  font-family: "Open Sans", sans-serif;
+}
+/**************  General Elements  **************/
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff0000;
+}
+h1,
+h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+h3 {
+  font-size: 1.2rem;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+i {
+  margin-right: 10px;
+}
+article header {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+article p {
+  line-height: 160%;
+}
+section {
+  margin: 0 auto;
+}
+
+/********************* Form settings *********************/
+/* class of a div which holds the form */
+#login {
+  height: 50%;
+  padding: 8% 8% 0;
+}
+.form-style {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 50px;
+  background-color: #eef1f1;
+  display: block;
+  border-radius: 10px;
+  line-height: 1rem;
+  box-shadow: #c0c0c0 3px 3px 5px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+/********************* Button with effect *********************/
+.btn-custom {
+  --bs-btn-bg: #CDF0EA!important;
+}
+.btn-custom2 {
+  --bs-btn-bg: #F6C6EA!important;
+  cursor: default;
+}
+.go-back {
+  text-align: center;
+  display: block;
+  width: 200px;
+  margin: 100px auto !important;
+}
+/********************* Footer *********************/
+footer {
+  min-height: 100px;
+  padding-top: 50px;
+}
+#copyright {
+  font-size: 0.8em;
+}
+
+/********************* Responsive Settings *********************/
+
+/********************* For tablets: *********************/
+@media only screen and (min-width: 400px) {
+
+}
+/********************* For desktop: *********************/
+@media only screen and (min-width: 768px) {
+  nav {
+    font-size: 1rem;
+  }
+}

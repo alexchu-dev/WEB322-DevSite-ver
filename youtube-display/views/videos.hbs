@@ -1,0 +1,75 @@
+<main id="all">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v16.0&appId=1581694888645343&autoLogAppEvents=1"
+        nonce="QhgYL3Be"></script>
+    {{#if error}}
+    <h2 class="center">Error!</h2>
+    <div class="center">{{errorMsg}}</div>
+    <div class="center"><input class="form-control button" type="button" value="Go back!" onclick="history.back()">
+    </div>
+    {{else}}
+    <div class="video">
+        <div class="embed-container">
+            <iframe width="1090" height="610" src="https://www.youtube.com/embed/{{video.videoId}}"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <article>
+            <div class="right like-module">
+                <button id="like-button" class="like" name="like">LIKE👍</button>
+                <span id="likes-count">{{video.likes}}</span>
+            </div>
+            <h3>{{video.title}}</h3>
+            <div class="desc"><span class="channel">{{video.channel}}</span> <span class="date">uploaded on
+                    {{video.uploadDate}}</span></div>
+        </article>
+        <div class="clear"></div>
+        <div class="comment-section">
+            <div class="site-comment col-6">
+                <h5>Site Comments</h5>
+                <form class="form" action="/portfolio/expressjs/youtube-display/comment" method="POST">
+                    <input type="hidden" name="videoId" value="{{video.videoId}}">
+                    <label for="username">Name:</label>
+                    <input class="form-control" type="text" name="username" id="username">
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control" name="comment" id="comment"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+
+                <div class="comments">
+                    {{#each comments}}
+                    <div class="comment-box">
+                        <div class="comment-title"><span class="comment-name">{{username}}</span> <span
+                                class="comment-date">{{timeformat commentDate}}</span>
+                        </div>
+                        <div class="comment-text">{{text}}</div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="facebook-comment col-6">
+                <h5>Facebook Comments</h5>
+                <div class="fb-comments" data-href="http://alexchu.dev/portfolio/expressjs/youtube-display/video/{{video.videoId}}"
+                    max-width="530" data-numposts="5"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const likeButton = document.getElementById('like-button');
+        likeButton.addEventListener('click', async () => {
+            try {
+                const res = await fetch(`/portfolio/expressjs/youtube-display/video/{{video.videoId}}/like`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                });
+                const video = await res.json();
+                const likesCount = document.getElementById('likes-count');
+                likesCount.textContent = video.likes;
+            } catch (err) {
+                console.error(err);
+            }
+        });
+    </script>
+    {{/if}}
+</main>

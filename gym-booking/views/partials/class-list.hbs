@@ -1,0 +1,17 @@
+<div class="classes-elem row">
+  <div class="col classes-image"><img src="/portfolio/expressjs/gym-booking/img/{{this.imageName}}" /></div>
+  <div class="col desc book-now">
+    <div class="title">
+      <h3>{{this.className}}</h3>
+    </div>
+    <div class="duration">Duration: {{this.length}} min</div>
+    <form method="POST" action="/portfolio/expressjs/gym-booking/add">
+      <button
+        class="button"
+        type="submit"
+        name="classId"
+        value="{{this._id}}"
+      >Book Now</button>
+    </form>
+  </div>
+</div>

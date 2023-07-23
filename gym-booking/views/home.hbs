@@ -1,0 +1,18 @@
+<main id="home" class="container">
+  {{#if noClass}}
+  <h2 class="center">Error!</h2>
+  <div class="center">{{noClassMsg}}</div>
+  <div class="center">
+    <input class="form-control button" type="button" value="Go back!" onclick="history.back()">
+  </div>
+  {{else}}
+  <h2 class="center">Our Classes</h2>
+  {{#if nologin}}<h2 class="center text-danger">{{{message}}}</h2>{{/if}}
+  {{#if login}}<h2 class="center font-palette-1">{{message}}</h2>{{/if}}
+  <section id="classes-elems">
+    {{#each classList}}
+    {{>class-list}}
+    {{/each}}
+  </section>
+  {{/if}}
+</main>

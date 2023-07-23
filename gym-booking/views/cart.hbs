@@ -1,0 +1,48 @@
+<main id="cart" class="container">
+  {{#if login}}
+    <h2 class="center">Cart</h2>
+    <section class="form-style" id="cart-contents">
+      <h3>Your Classes</h3>
+      {{#if emptyCart}}<p class="center">No items in cart</p>
+      {{else if paymentError}}<p class="center">Payment Error.</p>
+      {{else if paymentDone}}{{message}}
+      {{else}}
+        {{#each cartContent}}
+          <div class="class-list row">
+            <div class="col-8">
+              <h4 class="class-title">{{this.className}}</h4>
+              <div class="class-length">{{this.length}} minutes</div>
+            </div>
+            <div class="col-4 right"><form method="POST"><button
+                  class="button"
+                  type="submit"
+                  name="cartItemId"
+                  value="{{this.objId}}"
+                  formaction="/portfolio/expressjs/gym-booking/remove-class"
+                >Remove</button></form>
+            </div>
+          </div>
+        {{/each}}
+        <div class="row summary">
+          <div class="col-8 right">Subtotal:</div><div
+            class="col-4 right"
+          >${{subtotal}}</div>
+          <div class="col-8 right">Tax:</div><div
+            class="col-4 right"
+          >${{tax}}</div>
+          <div class="col-8 right">Total:</div><div
+            class="col-4 right"
+          >${{total}}</div>
+        </div>
+        <div><form method="POST"><button
+              class="button button2 container-fluid"
+              type="submit"
+              name="total"
+              value="{{total}}"
+              formaction="/portfolio/expressjs/gym-booking/checkout"
+            >PAY</button></form></div>
+      {{/if}}
+    </section>
+  {{else}}<h2 class="center">You must log in to view your cart.</h2>
+  {{/if}}
+</main>

@@ -1,0 +1,14 @@
+<div class="rental-product-card col-4">
+    <h3>{{this.name}}</h3>
+    <a href="/portfolio/expressjs/game-rental/product/{{this.pid}}"><img src="/portfolio/expressjs/game-rental/img/{{this.img}}"></a>
+    {{#if availability}}
+    <form method="POST" action="/portfolio/expressjs/game-rental/rent">
+        <label>How many days to rent?</label><br />
+        <input type="text" name="rentPeriod" placeholder="Minimum {{this.minPeriod}} days" value="{{this.minPeriod}}"
+            class="form-control">
+        <button class="form-control left-button" name="pid" value="{{this.pid}}">Rent</button>
+    </form>
+    {{else}}
+    <div class="rented">Rented by you</div>
+    {{/if}}
+</div>

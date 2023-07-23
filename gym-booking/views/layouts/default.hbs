@@ -1,0 +1,71 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/portfolio/expressjs/gym-booking/css/styles.css" />
+    <!--Credits to favicon.io for their lovely icons <3-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/portfolio/expressjs/gym-booking/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/portfolio/expressjs/gym-booking/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/portfolio/expressjs/gym-booking/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/portfolio/expressjs/gym-booking/img/site.webmanifest" />
+    <title>{{title}} | myGGym (Assignment 5)</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/portfolio/expressjs/gym-booking"><img src="/portfolio/expressjs/gym-booking/img/favicon-32x32.png" id="logo" /><span
+            class="logo-text"
+          >myGGym</span></a>
+        <ul class="navbar-nav col-8">
+
+          <li class="navbar-item"><a href="/portfolio/expressjs/gym-booking" class="navbar-link">Schedule</a>
+          </li>
+          <li class="navbar-item"><a href="/portfolio/expressjs/gym-booking/cart" class="navbar-link">Cart</a>
+          </li>
+          {{#if login}}
+            <li class="navbar-item"><a href="/portfolio/expressjs/gym-booking/logout" class="navbar-link">Logout
+                [{{#if username}}<span
+                    style="font-style: italic;"
+                  >{{username}}</span>{{/if}}]</a></li>
+          {{else}}
+            <li class="navbar-item"><a
+                href="/portfolio/expressjs/gym-booking/login"
+                class="navbar-link"
+              >Login</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+    </header>
+    {{{body}}}
+    <footer class="center">
+      <div id="copyright">&copy; myG Gym @Alexchu414 All rights reserved. | Free
+        Images by
+        <a href="https://pixabay.com/">Pixabay</a>
+        ,
+        <a href="https://freepik.com/">Freepik</a>
+        and
+        <a href="https://unsplash.com/">Unsplash</a>
+      </div>
+      <div class="small">This website is built by Alex Chu for his portfolio,
+        you are not allowed to copy any of the works.</div>
+    </footer>
+  </body>
+
+</html>

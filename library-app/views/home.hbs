@@ -1,0 +1,10 @@
+<main id="home" class="container">
+  <h2>Books in Library</h2>
+  <p>Here is a list of books in the library.</p>
+  {{#if logout}}<h2 class="center font-palette-1">{{message}}</h2>{{/if}}
+  <div class="row">
+    {{#each bookList}}
+    {{>book-list}}
+    {{/each}}
+  </div>
+</main>

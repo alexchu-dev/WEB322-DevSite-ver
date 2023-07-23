@@ -1,0 +1,33 @@
+<main id="admin">
+    <h1>Admin Panel</h1>
+    {{#if error}}
+    <h2 class="center">Error!</h2>
+    <div class="center">{{errorMsg}}</div>
+    <div class="center"><input class="form-control button" type="button" value="Go back!"
+            onclick="window.location.reload();">
+    </div>
+    {{else}}
+    <table>
+        <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Likes</th>
+            <th>Comments</th>
+            <th>Delete</th>
+        </tr>
+        {{#each videoList}}
+        <tr>
+            <td><a href="/youtube-display/video/{{this.videoId}}"><img
+                        src="https://img.youtube.com/vi/{{this.videoId}}/default.jpg" /></a></td>
+            <td><a href="/portfolio/expressjs/youtube-display/video/{{this.videoId}}">{{this.title}}</a></td>
+            <td class="center">{{this.likes}}</td>
+            <td class="center">{{this.commentsCount}}</td>
+            <td class="center">
+                <form action="/portfolio/expressjs/youtube-display/admin/delete" method="POST"><button name="videoId" value="{{this._id}}">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+    {{/if}}
+</main>

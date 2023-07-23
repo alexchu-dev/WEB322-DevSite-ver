@@ -1,0 +1,57 @@
+<main id="login">
+  {{#if login}}
+    <p class="center">{{message}}</p>
+  {{else if logout}}
+    <p class="center">{{message}}</p>
+  {{else}}
+    <form class="form-style form" method="POST">
+      {{#if newAccount}}
+        <label>CREATE AN ACCOUNT</label>
+        <p>Sign up to be a member ($75)</p>
+        <button
+          class="form-control button col-6"
+          type="submit"
+          formaction="/portfolio/expressjs/gym-booking/signup"
+          value="monthly"
+          name="plan"
+        >YES</button>
+        <button
+          class="form-control button button2 col-6"
+          type="submit"
+          formaction="/portfolio/expressjs/gym-booking/signup"
+          value="single"
+          name="plan"
+        >NO</button>
+      {{else}}
+        <label>LOGIN OR SIGNUP</label>
+        <input
+          class="form-control"
+          placeholder="Enter email address"
+          name="email"
+          id="email"
+        />
+        <input
+          class="form-control"
+          placeholder="Enter password"
+          name="password"
+          id="password"
+          type="password"
+          required
+        />
+        <button
+          class="form-control button col-6"
+          type="submit"
+          formaction="/portfolio/expressjs/gym-booking/login"
+        >LOGIN</button>
+        <button
+          class="form-control button button2 col-6"
+          type="submit"
+          formaction="/portfolio/expressjs/gym-booking/register"
+        >CREATE ACCOUNT</button>
+        {{#if error}}
+          <p class="danger small">{{errorMsg}}</p>
+        {{/if}}
+      {{/if}}
+    </form>
+  {{/if}}
+</main>

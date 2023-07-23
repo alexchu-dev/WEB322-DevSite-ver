@@ -1,0 +1,16 @@
+<main id="profile" class="container">
+  
+    <h2 class="center">Profile</h2>
+    {{#if returnSuccessful}}
+    <p class="center mb-4">Successfully returned <span class="text-primary strong">{{bookTitle}}.</span></p>
+    {{/if}}
+      <h4>Books borrowed:</h4>
+      {{#if emptyList}}<p class="center">You have no books to return.</p>
+      {{else}}
+        <div class="bookList row">
+            {{#each bookList}}
+              {{>book-list-profile}}
+            {{/each}}
+        </div>
+      {{/if}}
+</main>

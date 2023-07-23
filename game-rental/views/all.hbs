@@ -1,0 +1,24 @@
+{{#if msg}}<div class="center larger success">{{msg}}</div>{{/if}}
+<main id="all">
+    <h2 class="center">Rental Catalogue</h2>
+    <div id="action-bar">
+        <form method="POST" action="/portfolio/expressjs/game-rental/filter">
+            <label for="results" class="left-button">Modify Results:</label>
+            <select name="results" id="results" class="form-control left-button">
+                <option value="" disabled selected>Choose an option</option>
+                <option value="available">Available Items</option>
+                <option value="my-rentals">Your Rentals</option>
+            </select>
+            <input type="submit" value="Update" class="form-control left-button">
+        </form>
+        <form action="/portfolio/expressjs/game-rental/return">
+            <button type="submit" class="form-control right-button">Return All Items</button>
+        </form>
+
+    </div>
+    <section id="rental-product-list">
+        {{#each itemsList}}
+        {{>product-card-rent}}
+        {{/each}}
+    </section>
+</main>

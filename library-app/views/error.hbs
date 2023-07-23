@@ -1,0 +1,21 @@
+<main id="error" class="container">
+  <h2 class="display-1 text-center">Error!</h2>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div
+        class="alert alert-danger text-center align-items-center"
+        role="alert"
+      >
+        <div><i class="bi bi-emoji-wink"></i>{{errorMsg}}</div>
+      </div>
+      <div class="d-grid gap-2 col-3 mx-auto"><input
+          class="btn btn-custom"
+          type="button"
+          value="Go back!"
+          onclick="history.back()"
+        /></div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</main>

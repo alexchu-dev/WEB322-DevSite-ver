@@ -1,0 +1,16 @@
+<main id="home">
+  {{#if error}}
+  <h2 class="center">Error!</h2>
+  <div class="center">{{errorMsg}}</div>
+  <div class="center">
+    <input class="form-control button" type="button" value="Go back!" onclick="history.back()">
+  </div>
+  {{else}}
+  <h2>Video List</h2>
+  <section id="video-elems">
+    {{#each videoList}}
+    {{>video-card}}
+    {{/each}}
+  </section>
+  {{/if}}
+</main>

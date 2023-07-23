@@ -1,0 +1,432 @@
+/****************  Assignment 3   *****************/
+/*      Alex Chu (sid:153954219) @ WEB322NAA      */
+/**************************************************/
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  color: #212121;
+  margin: 0 auto;
+}
+main {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0px;
+  justify-content: center;
+}
+/**************  Header  **************/
+header {
+  background-color: #e40f26;
+  padding-top: 20px;
+  justify-content: center;
+  color: #fff;
+}
+header h1 {
+  font-size: 1.2rem;
+  border: 3px solid;
+  border-radius: 20px;
+  width: 220px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  text-align: center;
+}
+header h1 a {
+  color: #fff;
+}
+#search-bar {
+  display: block;
+  min-height: 150px;
+}
+/**************  Nav Bar  **************/
+nav {
+  padding: 20px 0px;
+}
+nav ul {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+nav ul li {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+nav ul li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+nav ul li a {
+  color: red;
+}
+
+/**************  Homepage Product Card Hero Section  **************/
+#product-cards {
+  justify-content: center;
+  width: 100%;
+  min-height: 30%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 0px;
+}
+#product-cards h3 {
+  text-align: center;
+}
+.product-card {
+  border: 0;
+}
+.product-card img {
+  width: 100%;
+}
+#welcome {
+  margin-bottom: 50px;
+}
+/**************  Rental Catalogue  **************/
+#all {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-button {
+  margin-right: auto;
+}
+
+.right-button {
+  margin-left: auto;
+}
+#rental-product-list {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.rental-product-card {
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.rental-product-card h3 {
+  margin: 0;
+}
+.rented {
+  background-color: yellow;
+  font-weight: 900;
+  font-style: italic;
+  margin: 10px;
+  padding: 10px;
+}
+/**************  Error Page  **************/
+#error h2 {
+  margin-bottom: 30px;
+}
+main#error {
+  width: 1000px;
+  margin: 0 auto;
+}
+/**************  General Elements  **************/
+a {
+  color: #d10000;
+  font-weight: 700;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffd000;
+}
+h1,
+h2 {
+  font-size: 1.8em;
+  margin: 0;
+}
+h3 {
+  font-size: 1.2em;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 10px;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+i {
+  margin-right: 10px;
+}
+input {
+  border-radius: 10px;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+article header {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+article p {
+  line-height: 160%;
+}
+section {
+  margin: 0 auto;
+}
+
+/***************  Common Classes   ***************/
+.container {
+  position: relative;
+}
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.clear {
+  clear: both;
+}
+.row {
+  width: 100%;
+  clear: both;
+}
+.larger {
+  font-size: 1.5em;
+}
+.largest {
+  font-size: 1.8em;
+}
+.home-title {
+  text-decoration: underline;
+}
+.success {
+  width: 500px;
+  padding: 10px;
+  font-style: italic;
+  border-radius: 10px;
+  background: cornflowerblue;
+  color: rgb(3, 3, 3);
+}
+/********************* Image hovering *********************/
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .image {
+  opacity: 0.3;
+}
+.container:hover .middle {
+  opacity: 1;
+}
+.text {
+  background-color: #d43b3b;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.middle a {
+  color: white;
+}
+
+/********************* Form settings *********************/
+/* class of a div which holds the form */
+.form {
+  background-color: #b1e5e5;
+  text-align: left;
+  display: block;
+  border-radius: 10px;
+}
+form {
+  padding: 20px;
+}
+label {
+  display: inline-block;
+  line-height: 30px;
+  text-align: left;
+  font-weight: 600;
+}
+.text-danger {
+  color: #f00;
+}
+.form-control {
+  line-height: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.form-control:focus {
+  box-shadow: #eff5ff;
+}
+.form .row {
+  margin-bottom: 1em;
+}
+/********************* Button with effect *********************/
+.button {
+  align-items: center;
+  background-color: #ffd205;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0s ease 0s;
+  border: 0px solid;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  height: 2.5rem;
+  line-height: 2rem;
+  max-width: 100%;
+  justify-content: center;
+  margin: 20px 0px;
+  padding: 0 25px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:after {
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  outline: 0;
+  z-index: -1;
+}
+
+.button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 15px 20px rgba(65, 0, 0, 0.4);
+  transform: translateY(-7px);
+  transition: transform 0.2s ease-out;
+}
+.go-back {
+  text-align: center;
+  display: block;
+  width: 200px;
+  margin: 100px auto !important;
+}
+/********************* Footer *********************/
+footer {
+  min-height: 100px;
+  padding-top: 50px;
+}
+#copyright {
+  font-size: 0.8em;
+}
+
+/********************* Theme palette for background and text *********************/
+.bg-palette-1 {
+  background-color: #33425b;
+}
+.bg-palette-2 {
+  background-color: #e6e6e6;
+}
+.font-palette-1 {
+  color: #2557a7;
+}
+.font-palette-2 {
+  color: #b9d2dd;
+}
+.font-1 {
+  font-family: "Open Sans", sans-serif;
+}
+/********************* Responsive Settings *********************/
+[class*="col-"] {
+  width: 100%;
+}
+/********************* For tablets: *********************/
+@media only screen and (min-width: 400px) {
+  .form {
+    max-width: 85%;
+    padding: 20px;
+  }
+  .product-card,
+  .rental-product-card {
+    margin-bottom: 20px;
+  }
+  #product-cards {
+    display: block;
+    width: 90vw;
+  }
+}
+/********************* For desktop: *********************/
+@media only screen and (min-width: 768px) {
+  nav {
+    font-size: 1rem;
+  }
+  .button {
+    padding: 0 40px;
+  }
+  .form {
+    max-width: 600px;
+    padding: 20px;
+  }
+  .product-card,
+  .rental-product-card {
+    margin-bottom: 20px;
+  }
+  #product-cards {
+    display: block;
+  }
+  #product-avail {
+    width: 100%;
+  }
+  .product-card-avil {
+    justify-content: center;
+    width: 45%;
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .product-card {
+    width: 100%;
+    margin: 0px 10px;
+  }
+  .rental-product-card {
+    margin-bottom: 20px;
+  }
+  #product-cards,
+  #product-avail {
+    display: flex;
+  }
+}

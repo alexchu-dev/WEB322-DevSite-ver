@@ -1,0 +1,19 @@
+{
+  "name": "library-app",
+  "version": "1.0.1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexchu-dev/WEB322-DevSite-ver.git"
+  },
+  "author": "Alex Chu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexchu-dev/WEB322-DevSite-ver/issues"
+  },
+  "homepage": "https://github.com/alexchu-dev/WEB322-DevSite-ver#readme",
+  "description": ""
+}

@@ -1,0 +1,18 @@
+<div class="col-4 col-sm-4 col-lg-2">
+  <img
+    src="/portfolio/expressjs/library-app/img/{{this.img}}"
+    class="card-img-top"
+    alt="{{this.title}}"
+  /></div>
+<div class="col-8 col-sm-8 col-lg-10 book-details">
+  <h6 class="book-title">{{this.title}}</h6>
+  <p class="book-text">by {{this.author}}</p>
+  <p class="book-desc">{{this.desc}}</p>
+  <form method="POST"><button
+      class="btn btn-custom2"
+      type="submit"
+      name="returnBookId"
+      value="{{this._id}}"
+      formaction="/portfolio/expressjs/library-app/return-book"
+    >Return</button></form>
+</div>

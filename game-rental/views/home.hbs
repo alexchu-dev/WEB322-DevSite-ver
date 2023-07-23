@@ -1,0 +1,22 @@
+<main id="home">
+  <div id="welcome">
+    <h2 class="center">Game On: Rent Your Way to Victory!</h2>
+    <p class="center">With our unbeatable game rental options, you can enjoy the latest titles and classic favorites
+      without committing
+      to a purchase!</p>
+  </div>
+  <section id="product-cards">
+    {{#randomEach itemsList 3}}
+    {{>product-card}}
+    {{/randomEach}}
+  </section>
+  <div class="bg-palette-2 ">
+    <h2 class="home-title">Products in stock</h2>
+    <section id="product-avail">
+      {{#each itemsList}}
+      {{>product-card-avail}}
+      {{/each}}
+    </section>
+  </div>
+  <div class="center"><a href="all" class="largest">&#8594;See All Items&#8592;</a></div>
+</main>

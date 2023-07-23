@@ -1,0 +1,26 @@
+<div class="col-12 col-sm-6 col-md-4 col-lg mb-3 mb-sm-0">
+  <div class="card">
+    <img src="/portfolio/expressjs/library-app/img/{{this.img}}" class="card-img-top" alt="{{this.title}}" />
+    <div class="card-body">
+      <h6 class="card-title">{{this.title}}</h6>
+      <p class="card-text">by {{this.author}}</p>
+      <div>{{#if borrowBy}}
+          <button
+            type="button"
+            class="btn"
+            data-bs-toggle="popover"
+            data-bs-title="ERROR!"
+            data-bs-content="This book cannot be borrowed because it is on loan."
+            disabled
+          >On Loan</button>
+        {{else}}<form method="POST" action="/portfolio/expressjs/library-app/borrow"><button
+              class="btn btn-custom"
+              type="submit"
+              name="borrow"
+              value="{{this._id}}"
+            >Borrow</button></form>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

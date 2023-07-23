@@ -1,0 +1,524 @@
+/****************  Assignment 5   *****************/
+/*      Alex Chu (sid:153954219) @ WEB322NAA      */
+/**************************************************/
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  color: #212121;
+  margin: 0 auto;
+}
+main {
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+}
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+/**************  Header  **************/
+header {
+  display: flex;
+  color: #000;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+#search-bar {
+  display: block;
+}
+#logo {
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+}
+.logo-text {
+  display: none;
+}
+/**************  Nav Bar  **************/
+.navbar {
+  width: 100%;
+  display: flex;
+  padding: 1rem 1rem;
+  background-color: #0867a7;
+  box-shadow: #a8a8a8 0px 5px 5px;
+}
+.navbar ul {
+  width:100%;
+  margin: 0.25rem;
+  padding: 0.25rem;
+}
+.navbar ul li {
+  display: inline;
+}
+.navbar ul li a {
+  color: rgb(255, 255, 255);
+}
+.navbar-link {
+  padding: 0.5rem 1rem;
+}
+
+/**************  Gym Classes  **************/
+#classes-elems {
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 0px;
+}
+.classes-elem {
+  display: flex;
+  border: 0;
+  margin-bottom: 10px;
+}
+.classes-elem img {
+  border-radius: 10px;
+}
+.classes-elem .title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.classes-elem .container {
+  padding: 10px;
+}
+.classes-elem .desc {
+  padding: 10px;
+  flex-grow: 1; /*may change to 2, confirm design later*/
+}
+.classes-elem h3 {
+  text-transform: uppercase;
+  color: #1845a7;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.classes-elem .duration {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.classes-image {
+  padding: 0 20px;
+}
+/**************  Cart  **************/
+#cart-contents {
+  padding:30px;
+}
+#cart-contents h3 {
+  color:#2854e2;
+  margin:0 0 1.5rem 0;
+  padding:0;
+}
+.class-list {
+  padding: 1rem 0;
+}
+.class-title {
+  width:100%;
+  margin:0;
+  padding:0;
+}
+.class-length {
+  padding-bottom: 1rem;
+  border-bottom: 0.3rem #9b9b9b dotted;
+}
+.class-list .button {
+  margin: 0;
+}
+.summary .col-8 {
+  font-weight: 700;
+  margin-bottom:0.5rem;
+}
+/**************  General Elements  **************/
+a {
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff0000;
+}
+h1,
+h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+h3 {
+  font-size: 1.2rem;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 10px;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+i {
+  margin-right: 10px;
+}
+article header {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+article p {
+  line-height: 160%;
+}
+section {
+  margin: 0 auto;
+}
+
+/***************  Common Classes   ***************/
+.container {
+  position: relative;
+}
+.left {
+  left: 0px;
+}
+.right {
+  right: 0px;
+  text-align: right;
+}
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.clear {
+  clear: both;
+}
+.strong {
+  font-weight: 700;
+}
+.small {
+  font-size: 0.8rem;
+}
+.larger {
+  font-size: 1.5rem;
+}
+.largest {
+  font-size: 1.8rem;
+}
+.text-danger, danger {
+  color: #f00;
+}
+.text-primary {
+  color: #0867a7;
+}
+.success {
+  width: 500px;
+  padding: 10px;
+  font-style: italic;
+  border-radius: 10px;
+  background: cornflowerblue;
+  color: rgb(3, 3, 3);
+}
+.border {
+  border: #000 1px solid;
+}
+.underline {
+  text-decoration: underline;
+}
+.home-title {
+  text-decoration: underline;
+}
+/********************* Image hovering *********************/
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .image {
+  opacity: 0.3;
+}
+.container:hover .middle {
+  opacity: 1;
+}
+.text {
+  background-color: #d43b3b;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.middle a {
+  color: white;
+}
+
+/********************* Form settings *********************/
+/* class of a div which holds the form */
+#login {
+  height: 50%;
+  padding: 8% 8% 0;
+}
+.form-style {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 50px;
+  background-color: #eef1f1;
+  display: block;
+  border-radius: 10px;
+  line-height: 1rem;
+  box-shadow: #c0c0c0 3px 3px 5px;
+}
+.form label {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  text-align: left;
+}
+.form-control {
+  line-height: 2rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.form-control:focus {
+  box-shadow: #eff5ff;
+}
+.form .row {
+  margin-bottom: 1em;
+}
+.form input,
+.form textarea {
+  width: 100%;
+}
+.form input[type="submit"] {
+  cursor: pointer;
+}
+/********************* Button with effect *********************/
+.button {
+  align-items: center;
+  background-color: rgb(78, 161, 255);
+  transition: all 0s ease 0s;
+  border: 0px solid;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  max-width: 100%;
+  justify-content: center;
+  margin: 20px 0px;
+  padding: 0 25px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button2 {
+  background-color: rgb(255, 78, 161);
+}
+.button:after {
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  outline: 0;
+  z-index: -1;
+}
+.button:active {
+  background-color: #ffdeda;
+  box-shadow: 3px 3px 5px #aaa;
+  transform: translate(2px, 2px);
+  transition: transform 0s ease-out;
+}
+
+.button:hover {
+  background-color: rgb(149, 186, 255);
+}
+.button2:hover {
+  background-color: rgb(248, 174, 208);
+}
+.go-back {
+  text-align: center;
+  display: block;
+  width: 200px;
+  margin: 100px auto !important;
+}
+/********************* Overlay warning dialog *********************/
+#overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#overlay-content {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+/********************* Footer *********************/
+footer {
+  min-height: 100px;
+  padding-top: 50px;
+}
+#copyright {
+  font-size: 0.8em;
+}
+
+/********************* Theme palette for background and text *********************/
+.bg-palette-1 {
+  background-color: #33425b;
+}
+.bg-palette-2 {
+  background-color: #e6e6e6;
+}
+.font-palette-1 {
+  color: #2557a7;
+}
+.font-palette-2 {
+  color: #ffffff;
+}
+.font-1 {
+  font-family: "Open Sans", sans-serif;
+}
+/********************* Responsive Settings *********************/
+[class*="col-"] {
+  max-width: 100%;
+  position: relative;
+  flex-basis: 1;
+  flex-grow: 1;
+}
+.col {
+  max-width: 100%;
+  position: relative;
+  flex-basis: 1;
+  flex-grow: 1;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+/********************* For tablets: *********************/
+@media only screen and (min-width: 400px) {
+  .classes-elem {
+    margin-bottom: 20px;
+  }
+  #classes-elems {
+    max-width: 90vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  header {
+    display: block;
+  }
+  #logo {
+    width: 100%;
+  }
+  #search-bar {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+/********************* For desktop: *********************/
+@media only screen and (min-width: 768px) {
+  nav {
+    font-size: 1rem;
+  }
+  .col {
+    flex-basis: 0;
+  }
+  .button {
+    padding: 0 40px;
+  }
+  .classes-elem {
+    margin-bottom: 20px;
+  }
+  #classes-elem {
+    display: block;
+  }
+  #product-avail {
+    width: 100%;
+  }
+  .product-card-avail {
+    justify-content: center;
+    width: 45%;
+    display: inline-block;
+  }
+  .col-8 {
+    width: 66%;
+  }
+  .col-6 {
+    width: 49%;
+  }
+  .col-4 {
+    width: 33%;
+  }
+  #logo {
+    margin-right: 20px;
+    display: inline;
+  }
+  #search-bar {
+    width: 70%;
+    display: inline;
+    right: 0;
+  }
+  #search-bar input {
+    width: 70%;
+  }
+  .comment-section {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .classes-elem {
+    margin-bottom: 50px;
+  }
+}

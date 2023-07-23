@@ -1,0 +1,11 @@
+{
+  "name": "game-rental",
+  "version": "1.0.1",
+  "description": "This is an assignment from WEB322 course, to demonstrate a simple online rental shop. The theme I have picked is a game rental shop, the users can search and select a game they want and input the num of days to rent. The users are also able to check what is in stock and what are already being rent. The users can return all the items by pressing a button. This assignment demonstrate the knowledge of both Javascript, Express Handlebars, layout and partials, and object literal.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Chu",
+  "license": "ISC"
+}
